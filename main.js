@@ -19,42 +19,6 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//
-//         } else if (roastSelection.value === "all") {
-//             tbody.innerHTML = renderCoffees(coffees);
-//
-//         } else if (roastSelection === document.getElementById("allthecoffee")) {
-//             filteredCoffees.push(coffees);
-//
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-// var allCoffee = document.querySelector('#allthecoffee');
-
-
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     sortedCoffees.forEach(function (coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         } else if (selectedRoast === "all") {
-//             renderCoffees(sortedCoffees);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
 
 // working code for search by roast below, but not including "all" functionality
 function updateCoffees(e) {
@@ -62,7 +26,7 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast || selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
     });
@@ -101,7 +65,7 @@ var addCoffeeButton = document.querySelector('#newCoffeeSubmit');
 
 tbody.innerHTML = renderCoffees(sortedCoffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
 
 var searchQuery = function (e) {

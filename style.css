@@ -35,6 +35,7 @@ body>h1 {
     padding: 10px;
     font-size: 1.25em;
     color: #252525;
+    text-align: center;
 }
 .coffeediv {
     width: 52%;
@@ -56,7 +57,7 @@ body>h1 {
 }
 
 #coffeeSearch{
-    margin-left: 12%;
+    /*margin-left: 12%;*/
 }
 
 #coffesearchdiv{
@@ -80,6 +81,10 @@ body>h1 {
     background-image: url("assets/chalkboarder.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+
+label {
+    margin: 0!important;
 }
 
 #forms {
@@ -115,3 +120,20 @@ body>h1 {
 /*    z-index: 10;*/
 
 /*}*/
+.hover {
+    transition: all 1.5s;
+}
+
+.hover:hover {
+    text-shadow: 2px 2px #E6E6E6;
+    font-weight: bold;
+}
+
+#logoid {
+    background-image: url("assets/coffeelogo.jpg");
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    background-position: center;
+    position: absolute;
+}
