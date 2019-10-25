@@ -123,7 +123,7 @@ function createBrew(e) {
             roast: y,
         })
     } else alert("Please enter a name for your coffee");
-    coffees = coffees.reverse();
+    // coffees = coffees.reverse();
     tbody.innerHTML = renderCoffees(coffees);
 
 }
