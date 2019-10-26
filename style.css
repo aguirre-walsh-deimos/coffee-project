@@ -1,6 +1,25 @@
 * {
-    /*margin-left: 2%;*/
+margin: 0;
+padding:0;
+box-sizing: border-box;
 }
+/*#container {*/
+/*    display: grid;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    grid-template-columns: 20px repeat(10, 1fr) 20px;*/
+/*    justify-content: center;*/
+/*    align-content: center;*/
+/*    grid-gap: 0;*/
+/*    height: 100%;*/
+/*    width: 100vw;*/
+/*    grid-template-areas: */
+/*    ". Coffee ."*/
+/*    "BB  BB   F"*/
+/*    "BB  BB F"*/
+/*    "fact fact ."*/
+/*}*/
+
 
 body{
     background-image: url("assets/coffeebackground1.jpeg");
@@ -12,11 +31,19 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-body>h1 {
+
+
+#coffeeHeader {
     font-family: 'Yellowtail', cursive;
     font-size: 5em;
     margin-left: -1em;
+    text-shadow: 2px 2px #E6E6E6;
+    font-weight: bold;
     /*z-index: 1;*/
+}
+
+#coffeeHeader>h1 {
+    font-size: 5rem!important;
 }
 
 /*td, th {*/
@@ -120,14 +147,14 @@ label {
 /*    z-index: 10;*/
 
 /*}*/
-.hover {
-    transition: all 1.5s;
-}
+/*.hover {*/
+/*    transition: all 1.5s;*/
+/*}*/
 
-.hover:hover {
-    text-shadow: 2px 2px #E6E6E6;
-    font-weight: bold;
-}
+/*.hover:hover {*/
+/*    text-shadow: 2px 2px #E6E6E6;*/
+/*    font-weight: bold;*/
+/*}*/
 
 #logoid {
     background-image: url("assets/coffeelogo.jpg");
@@ -136,4 +163,18 @@ label {
     border-radius: 50%;
     background-position: center;
     position: absolute;
+}
+
+#coffeeFacts {
+    font-family: monospace;
+    font-size: 2em;
+    margin-left: 15%;
+    width: 25%;
+}
+
+#didyouKnow {
+    font-family: monospace;
+    font-size: 2em;
+    margin-left: 15%;
+    width: 25%;
 }

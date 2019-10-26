@@ -3,68 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="https://kit.fontawesome.com/990d7059ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Homemade+Apple&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Homemade+Apple&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
+<div id="everything">
+    <div class="pb-3" id="coffeeHeader">
+        <h1 class="text-center hover">Coffee!</h1>
+    </div>
+    <!--    <div id="headerDiv" class="text-center">-->
+    <!--        <img id="headerGif" src="assets/coffeetime.gif">-->
+    <!--    </div>-->
+    <div id="formsDiv">
+        <ul id="forms" class="mt-4">
+            <li id="searchForCoffee">
+                <div class="formCard">
+                    <form>
+                        <label id="roastLabel" for="roast-selection">Search by Roast</label><br>
+                        <select id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <option selected id="allthecoffee">all</option>
+                        </select>
+                        <!--                <input class="btn-primary" id="submit" type="submit"/>-->
+                    </form>
+                    <label>Search by Name<br><input type="text" id="coffeeSearch" class="input"
+                                                    placeholder="search for coffee..."></label>
+                </div>
+            </li>
+            <li id="addACoffee">
+                <div class="formCard">
+                    <form>
+                        <label class="mx-0" for="addCoffeeName">Add a Coffee Here</label>
+                        <br>
+                        Select roast type
+                        <br>
 
-<h1 id="coffeeHeader" class="text-center hover">Coffee!</h1>
-<!--    <div id="headerDiv" class="text-center">-->
-<!--        <img id="headerGif" src="assets/coffeetime.gif">-->
-<!--    </div>-->
-<ul id="forms">
-    <li id="searchForCoffee">
-        <div class="formCard">
-            <form>
-                <label id="roastLabel" for="roast-selection">Search by Roast</label><br>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option selected id="allthecoffee">all</option>
-                </select>
-                <!--                <input class="btn-primary" id="submit" type="submit"/>-->
-            </form>
-            <label>Search by Name<br><input type="text" id="coffeeSearch" class="input"
-                                            placeholder="search for coffee..."></label>
+                        <select id="addCoffeeRoast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
+                    </form>
+                    <input type="text" id="addCoffeeName" class="input"
+                           placeholder="name your blend...">
+                </div>
+
+            </li>
+        </ul>
+    </div>
+    <div id="container" class="pl-2">
+        <div class="spacer"></div>
+        <table id="coffeeoutputtable">
+            <tbody id="coffees"></tbody>
+        </table>
+        <div class="spacer"></div>
+    </div>
+
+    <div id="factCard" class="my-5">
+        <div id="logoid"></div>
+        <div class="pl-5">
+            <p id="didyouKnow">Did you know...?</p>
+            <p id="coffeeFacts"></p>
         </div>
-    </li>
-    <li id="addACoffee">
-        <div class="formCard">
-            <form>
-                <label class="mx-0" for="addCoffeeName">Add a Coffee Here</label>
-                <br>
-                Select roast type
-                <br>
-
-                <select id="addCoffeeRoast">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
-            </form>
-            <input type="text" id="addCoffeeName" class="input"
-                   placeholder="name your blend...">
-        </div>
-
-    </li>
-</ul>
-<div id="container">
-    <div class="spacer"></div>
-    <table id="coffeeoutputtable">
-        <tbody id="coffees"></tbody>
-    </table>
-    <div class="spacer"></div>
+    </div>
 </div>
 
-
-<div id="logoid">
-
-</div>
 
 <script src="main.js"></script>
 </body>
