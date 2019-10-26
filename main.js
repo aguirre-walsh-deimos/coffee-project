@@ -60,9 +60,12 @@ var addCoffeeButton = document.querySelector('#newCoffeeSubmit');
 
 
 // var allCoffee = document.querySelector('#allthecoffee');
+;
 
 
 tbody.innerHTML = renderCoffees(sortedCoffees);
+tbody.innerHTML += savedNames;
+tbody.innerHTML += savedRoasts;
 
 roastSelection.addEventListener('change', updateCoffees);
 
@@ -91,7 +94,8 @@ function createBrew(e) {
         })
     } else alert("Please enter a name for your coffee");
     tbody.innerHTML = renderCoffees(sortedCoffees);
-
+    // localStorage.setItem(coffees.name, document.getElementById("addCoffeeName").value);
+    // localStorage.setItem(coffees.roast, document.getElementById("addCoffeeRoast").value);
 }
 
 addCoffeeButton.addEventListener('click', createBrew);
@@ -120,3 +124,15 @@ function nextFact() {
     }
 }
 
+// // Storing data:
+// var myObj = {name: "John", age: 31, city: "New York"};
+// var myJSON = JSON.stringify(myObj);
+// localStorage.setItem("testJSON", myJSON);
+//
+// // Retrieving data:
+// text = localStorage.getItem("testJSON");
+// obj = JSON.parse(text);
+// document.getElementById("demo").innerHTML = obj.name;
+
+// var savedNames = localStorage.getItem(coffees.name);
+// var savedRoasts = localStorage.getItem(coffees.roast);

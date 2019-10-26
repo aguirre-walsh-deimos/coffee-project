@@ -164,7 +164,9 @@ label {
     background-position: center;
     position: absolute;
 }
-
+#factCard{
+ padding-bottom: 5%;
+}
 #coffeeFacts {
     font-family: monospace;
     font-size: 2em;
