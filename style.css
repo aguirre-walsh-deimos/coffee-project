@@ -1,8 +1,11 @@
 * {
-    /*margin-left: 2%;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+
+body {
     background-image: url("assets/coffeebackground1.jpeg");
     background-size: 100%;
     background-repeat: repeat-y;
@@ -12,17 +15,20 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-body>h1 {
+
+
+#coffeeHeader {
     font-family: 'Yellowtail', cursive;
     font-size: 5em;
     margin-left: -1em;
+    text-shadow: 2px 2px #E6E6E6;
+    font-weight: bold;
     /*z-index: 1;*/
 }
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
+#coffeeHeader > h1 {
+    font-size: 5rem !important;
+}
 
 .spacer {
     height: 1.25rem;
@@ -37,6 +43,7 @@ body>h1 {
     color: #252525;
     text-align: center;
 }
+
 .coffeediv {
     width: 52%;
     font-family: 'Homemade Apple', cursive;
@@ -49,33 +56,35 @@ body>h1 {
     /*margin-left: 2%;*/
 }
 
-#coffeeoutputtable{
+#coffeeoutputtable {
     /*margin-left: 2%;*/
     width: 100%;
-    height: 50%!important;
+    height: 50% !important;
     border-radius: 10px;
 }
 
-#coffeeSearch{
+#coffeeSearch {
     /*margin-left: 12%;*/
 }
 
-#coffesearchdiv{
+#coffesearchdiv {
     display: inline-block;
     margin-right: -10%;
 }
-#coffees{
+
+#coffees {
     padding-left: 2%;
 }
+
 .roastName {
-    padding-left:10px;
+    padding-left: 10px;
     line-height: 2em;
     font-family: 'Gochi Hand', cursive;
     font-size: 1.5em;
 
 }
 
-#container{
+#container {
     width: 58%;
     border-radius: 10px;
     background-image: url("assets/chalkboarder.jpg");
@@ -84,49 +93,20 @@ body>h1 {
 }
 
 label {
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 #forms {
-    width: 55%!important;
+    width: 55% !important;
     padding: 0;
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
 }
+
 #addACoffee {
     padding-left: 25px;
     float: left;
-}
-
-/*#headerGif {*/
-/*    height: 250px;*/
-/*    width: 250px;*/
-/*    float: right;*/
-/*    clear: both;*/
-/*    opacity: .5;*/
-/*    margin-left: 90%;*/
-/*    margin-bottom: 90%;*/
-/*    z-index: 10;*/
-
-/*}*/
-
-/*#headerDiv {*/
-/*    position: fixed;*/
-/*    !*margin-right: 0;*!*/
-/*    !*margin-top: 0;*!*/
-/*    margin-left: 83%;*/
-/*    margin-bottom: 90%;*/
-/*    z-index: 10;*/
-
-/*}*/
-.hover {
-    transition: all 1.5s;
-}
-
-.hover:hover {
-    text-shadow: 2px 2px #E6E6E6;
-    font-weight: bold;
 }
 
 #logoid {
@@ -136,4 +116,22 @@ label {
     border-radius: 50%;
     background-position: center;
     position: absolute;
+}
+
+#factCard {
+    padding-bottom: 5%;
+}
+
+#coffeeFacts {
+    font-family: monospace;
+    font-size: 2em;
+    margin-left: 15%;
+    width: 25%;
+}
+
+#didyouKnow {
+    font-family: monospace;
+    font-size: 2em;
+    margin-left: 15%;
+    width: 25%;
 }
