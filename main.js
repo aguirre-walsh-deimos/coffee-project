@@ -101,3 +101,30 @@ function createBrew(e) {
 
 addCoffeeButton.addEventListener('click', createBrew);
 
+
+//coffee facts -------------------------------->
+var text = [
+    "Coffee is the world's 2nd most traded commodity",
+    "Coffee beans are technically seeds.",
+    "No coffee = <i class='fas fa-battery-empty'></i> <br> Coffee = <i class='fas fa-battery-three-quarters'></i><br>Espresso = <i class='fas fa-battery-full'></i>",
+    "Brazil grows the most coffee in the world.",
+    "Espresso means \"pressed out\" in Italian.",
+    "Coffee drinkers tend to live longer.",
+    "The largest cup of coffee ever was 9 feet tall!",
+    "Starbucks opens an average of two stores per day. #DrinkLocal",
+];
+var counter = 0;
+var elem = document.getElementById("coffeeFacts");
+setInterval(nextFact, 5000);
+
+function nextFact() {
+    elem.innerHTML = text[counter];
+    counter++;
+    if (counter >= text.length) {
+        counter = 0;
+    }
+}
+
+function clearAllCoffees(){
+    localStorage.clear("coffee");
+}
