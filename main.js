@@ -25,7 +25,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
@@ -34,7 +34,7 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-if (localStorage.length ===0) {
+if (localStorage.length === 0) {
     var coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light'},
@@ -50,7 +50,8 @@ if (localStorage.length ===0) {
         {id: 12, name: 'Viennese', roast: 'dark'},
         {id: 13, name: 'Italian', roast: 'dark'},
         {id: 14, name: 'French', roast: 'dark'},
-    ]; } else {
+    ];
+} else {
     coffees = JSON.parse(localStorage.getItem("coffee"));
 }
 var sortedCoffees = coffees.reverse();
@@ -125,6 +126,6 @@ function nextFact() {
     }
 }
 
-function clearAllCoffees(){
+function clearAllCoffees() {
     localStorage.clear("coffee");
 }
