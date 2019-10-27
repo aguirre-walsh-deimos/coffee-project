@@ -95,6 +95,7 @@ function createBrew(e) {
         })
     } else alert("Please enter a name for your coffee");
     tbody.innerHTML = renderCoffees(sortedCoffees);
+    localStorage.setItem("coffee", JSON.stringify(coffees));
 
 }
 
