@@ -1,6 +1,5 @@
 "use strict"
 
-//creates div from objects in coffees array
 function renderCoffee(coffee) {
     var html = '<div class="row coffeediv">';
     // html += '<td>' + coffee.id + '</td>';
@@ -11,7 +10,6 @@ function renderCoffee(coffee) {
     return html;
 }
 
-//turns object from renderCoffee into a string
 function renderCoffees(coffees) {
     var html = '';
     for (var i = coffees.length - 1; i >= 0; i--) {
@@ -20,7 +18,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
-//dropdown for searching for coffee by roast type
+
+// working code for search by roast below, but not including "all" functionality
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -34,44 +33,43 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-if (localStorage.length === 0) {
-    var coffees = [
-        {id: 1, name: 'Light City', roast: 'light'},
-        {id: 2, name: 'Half City', roast: 'light'},
-        {id: 3, name: 'Cinnamon', roast: 'light'},
-        {id: 4, name: 'City', roast: 'medium'},
-        {id: 5, name: 'American', roast: 'medium'},
-        {id: 6, name: 'Breakfast', roast: 'medium'},
-        {id: 7, name: 'High', roast: 'dark'},
-        {id: 8, name: 'Continental', roast: 'dark'},
-        {id: 9, name: 'New Orleans', roast: 'dark'},
-        {id: 10, name: 'European', roast: 'dark'},
-        {id: 11, name: 'Espresso', roast: 'dark'},
-        {id: 12, name: 'Viennese', roast: 'dark'},
-        {id: 13, name: 'Italian', roast: 'dark'},
-        {id: 14, name: 'French', roast: 'dark'},
-    ];
-} else {
+if (localStorage.length ===0) {
+var coffees = [
+    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 2, name: 'Half City', roast: 'light'},
+    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 4, name: 'City', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
+    {id: 6, name: 'Breakfast', roast: 'medium'},
+    {id: 7, name: 'High', roast: 'dark'},
+    {id: 8, name: 'Continental', roast: 'dark'},
+    {id: 9, name: 'New Orleans', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
+]; } else {
     coffees = JSON.parse(localStorage.getItem("coffee"));
 }
-
-//stores coffee as reversed array so displays correctly
 var sortedCoffees = coffees.reverse();
-
-//pushes sorted coffees to table body
-tbody.innerHTML = renderCoffees(sortedCoffees);
 
 
 var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 var addCoffeeButton = document.querySelector('#newCoffeeSubmit');
 
 
-//allows dropdown to execute function on value change, no further user input required
+// var allCoffee = document.querySelector('#allthecoffee');
+
+
+tbody.innerHTML = renderCoffees(sortedCoffees);
+
 roastSelection.addEventListener('change', updateCoffees);
 
-//text input search for coffees by name and roast type
+
 var searchQuery = function (e) {
     var html = "";
     for (var i = 0; i < sortedCoffees.length; i++) {
@@ -83,10 +81,8 @@ var searchQuery = function (e) {
     }
 };
 
-// prompts coffeeSearch on key press, so a submit button is not needed
 coffeeSearch.addEventListener("keydown", searchQuery);
 
-//accepts val from roast dropdown and name text input and pushes as new obj to array
 function createBrew(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var x = document.getElementById("addCoffeeName").value;
@@ -103,7 +99,6 @@ function createBrew(e) {
 
 }
 
-// tied to button to run createBrew function
 addCoffeeButton.addEventListener('click', createBrew);
 
 
@@ -130,7 +125,6 @@ function nextFact() {
     }
 }
 
-//run function clearAllCoffees in console to clear local storage
-function clearAllCoffees() {
+function clearAllCoffees(){
     localStorage.clear("coffee");
 }
