@@ -16,11 +16,10 @@
     <div class="pb-3" id="coffeeHeader">
         <h1 class="text-center hover">Coffee!</h1>
     </div>
-    <!--    <div id="headerDiv" class="text-center">-->
-    <!--        <img id="headerGif" src="assets/coffeetime.gif">-->
-    <!--    </div>-->
+    <!--    holds both search and add forms-->
     <div id="formsDiv">
         <ul id="forms" class="mt-4">
+            <!--            coffee search form-->
             <li id="searchForCoffee">
                 <div class="formCard">
                     <form>
@@ -31,12 +30,12 @@
                             <option>dark</option>
                             <option selected id="allthecoffee">all</option>
                         </select>
-                        <!--                <input class="btn-primary" id="submit" type="submit"/>-->
                     </form>
                     <label>Search by Name<br><input type="text" id="coffeeSearch" class="input"
                                                     placeholder="search for coffee..."></label>
                 </div>
             </li>
+            <!--            add coffee form-->
             <li id="addACoffee">
                 <div class="formCard">
                     <form>
@@ -44,20 +43,21 @@
                         <br>
                         Select roast type
                         <br>
-
                         <select id="addCoffeeRoast">
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <input id="newCoffeeSubmit" class="btn-primary" value="  Add  " type="submit"/>
+                        <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
                     </form>
                     <input type="text" id="addCoffeeName" class="input"
                            placeholder="name your blend...">
                 </div>
+
             </li>
         </ul>
     </div>
+    <!--    blackboard container to hold table that accepts coffee objects-->
     <div id="container" class="pl-2">
         <div class="spacer"></div>
         <table id="coffeeoutputtable">
@@ -66,15 +66,14 @@
         <div class="spacer"></div>
     </div>
 
+    <!--    div to hold fact card-->
     <div id="factCard" class="my-5">
-        <div id="logoid" class="mb-5 ml-5"></div>
-        <div class="pl-5 ml-5">
+        <div id="logoid"></div>
+        <div class="pl-5">
             <p id="didyouKnow">Did you know...?</p>
             <p id="coffeeFacts"></p>
         </div>
     </div>
-    <div class="spacer"></div>
-
 </div>
 
 
