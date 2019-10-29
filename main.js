@@ -1,5 +1,6 @@
 "use strict";
 
+//creates coffee divs
 function renderCoffee(coffee) {
     var html = '<div class="row coffeediv">';
     // html += '<td>' + coffee.id + '</td>';
@@ -20,7 +21,6 @@ function renderCoffees(coffees) {
 }
 
 
-// working code for search by roast below, but not including "all" functionality
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -33,6 +33,8 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+//original coffee array
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 if (localStorage.length === 0) {
     var coffees = [
@@ -118,6 +120,7 @@ var counter = 0;
 var elem = document.getElementById("coffeeFacts");
 setInterval(nextFact, 5000);
 
+//carousels facts every 5 seconds
 function nextFact() {
     elem.innerHTML = text[counter];
     counter++;
@@ -126,6 +129,7 @@ function nextFact() {
     }
 }
 
+//clears local storage
 function clearAllCoffees() {
     localStorage.clear("coffee");
 }

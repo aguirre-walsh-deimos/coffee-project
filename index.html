@@ -12,8 +12,8 @@
 
 </head>
 <body>
-<!--test comment -->
 
+<!--planning to leave 3 items in ul/flex, search card, add card, and gif card. fact card needs to be broken out and positioned on right side of page, set min height on blackboard -->
 
 <div id="everything">
     <div class="pb-3" id="coffeeHeader">
@@ -38,6 +38,11 @@
                                                     placeholder="search for coffee..."></label>
                 </div>
             </li>
+            <li>
+                <div class="formCard coffeegifcard">
+                    <img src="assets/coffeetime.gif" id="coffeegif">
+                </div>
+            </li>
             <!--            add coffee form-->
             <li id="addACoffee">
                 <div class="formCard">
@@ -56,27 +61,34 @@
                     <input type="text" id="addCoffeeName" class="input"
                            placeholder="name your blend...">
                 </div>
-
             </li>
         </ul>
     </div>
-    <!--    blackboard container to hold table that accepts coffee objects-->
-    <div id="container" class="py-5 pl-2">
-<!--        <div class="spacer"></div>-->
-        <table class="p-5" id="coffeeoutputtable">
-            <tbody class="my-5" id="coffees"></tbody>
-        </table>
-<!--        <div class="spacer"></div>-->
-    </div>
 
-    <!--    div to hold fact card-->
-    <div id="factCard" class="my-5">
-        <div id="logoid"></div>
-        <div class="pl-5">
-            <p id="didyouKnow">Did you know...?</p>
-            <p id="coffeeFacts"></p>
-        </div>
-    </div>
+
+</div>
+<!--    blackboard container to hold table that accepts coffee objects-->
+<div id="container" class="py-5 pl-2">
+    <!--        <div class="spacer"></div>-->
+    <table class="p-5" id="coffeeoutputtable">
+        <tbody class="my-5" id="coffees"></tbody>
+    </table>
+    <!--        <div class="spacer"></div>-->
+</div>
+
+<!--    div to hold fact card-->
+<div id="factCard" class="my-5">
+    <ul style="display: flex; list-style-type: none">
+        <li>
+            <div id="logoid"></div>
+        </li>
+        <li>
+            <div id="facts" class="pl-5">
+                <p id="didyouKnow" class="ml-5">Did you know...?</p>
+                <p id="coffeeFacts" class="ml-5"></p>
+            </div>
+        </li>
+    </ul>
 </div>
 
 
