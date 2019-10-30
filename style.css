@@ -101,12 +101,17 @@ label {
 }
 
 #forms {
-    width: 58% !important;
+    /*width: 58% !important;*/
     margin-left: 0;
     padding: 0;
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
+}
+
+#formsDiv{
+    width: 58%;
+    display: inline-block;
 }
 
 #addACoffee {
@@ -116,6 +121,7 @@ label {
 
 #logoid {
     background-image: url("assets/coffeelogo.jpg");
+    background-position: center;
     height: 175px;
     width: 175px;
     border-radius: 50%;
@@ -128,15 +134,19 @@ label {
 #factCard {
     padding: 1%;
     /*margin: 0;*/
-    margin-left: auto;
-    margin-right: 25px;
-    margin-top: 75px;
+    /*margin-left: auto;*/
+    /*margin-top: -200px;*/
+    /*margin-right: 25px;*/
+    /*margin-top: 75px;*/
     width: 550px;
     height: 300px;
     background: sienna;
     border: 2px solid black;
     border-radius: 5px;
-    clear: both;
+    /*clear: both;*/
+    position: absolute;
+    right: 25px;
+    top: 96px;
 
 
 }
@@ -144,7 +154,7 @@ label {
 #coffeeFacts {
     font-family: monospace;
     font-size: 2em;
-    /*width: 400px;*/
+    width: 250px;
     /*clear: right;*/
     /*margin-left: 15%;*/
     /*width: 25%;*/
@@ -154,7 +164,7 @@ label {
 #didyouKnow {
     font-family: monospace;
     font-size: 2em;
-    /*width: 200px;*/
+    width: 250px;
     /*margin-left: 40%*/
 
     /*margin-left: 15%;*/
